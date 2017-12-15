@@ -1,10 +1,10 @@
+#coding: utf-8
 import os
 import time
 
 def measure_temp():
 	temp = os.popen('vcgencmd measure_temp').readline()
-	temp.replace('\'','º')
-	return (temp.replace('temp=',''))
+	return (temp.replace('temp=','').replace("'C\n", "C"))
 
 while True:
 	print(measure_temp())
