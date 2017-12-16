@@ -27,10 +27,13 @@ def getDiskSpace():
         if i == 2:
             return(line.split()[1:5])
 
-
+ram = getRAM()
+disk = getDiskSpace()
 while True:
-	print(getCPUTemp())
-        print(getRAM())
-        print(getCPUUse())
-        print(getDiskSpace())
-	time.sleep(1)
+	print("CPU Temp: " + getCPUTemp())
+    print("Total RAM: " + ran[0] + "\nUsed RAM: " ram[1] + "\nFree RAM: " ram[2])
+    print("CPU Use (porcent): " + getCPUUse())
+    print("Total disk space: " + disk[0] + "\nUsed disk space: " + disk[1] + "\nRemaining disk space: " + disk[2] + "\nPercent of disk used: " + disk[3])
+	time.sleep(5)
+
+
